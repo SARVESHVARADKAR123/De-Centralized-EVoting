@@ -1,0 +1,189 @@
+/* frontend/src/components/VoterPanel.css */
+.voter-panel {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .voter-panel h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #764ba2;
+  }
+  
+  /* Status Card */
+  .voter-status-card {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .status-item:last-child {
+    border-bottom: none;
+  }
+  
+  .status-label {
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .status-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .status-badge.registered {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+  }
+  
+  .status-badge.not-registered {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+  }
+  
+  .status-badge.voted {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+  }
+  
+  .status-badge.not-voted {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+  }
+  
+  .status-badge.running {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+  }
+  
+  .status-badge.not-running {
+    background: linear-gradient(135deg, #6b7280, #4b5563);
+    color: white;
+  }
+  
+  .voted-candidate {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  
+  /* Voter Messages */
+  .voter-messages {
+    margin-bottom: 25px;
+  }
+  
+  .message {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 4px solid;
+  }
+  
+  .message strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .message p {
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  .warning-message {
+    background: #fef3c7;
+    border-color: #f59e0b;
+    color: #92400e;
+  }
+  
+  .info-message {
+    background: #dbeafe;
+    border-color: #3b82f6;
+    color: #1e3a8a;
+  }
+  
+  .success-message {
+    background: #d1fae5;
+    border-color: #10b981;
+    color: #065f46;
+  }
+  
+  /* Voter Info Box */
+  .voter-info-box {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 25px;
+    border-radius: 12px;
+    color: white;
+  }
+  
+  .voter-info-box h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .voter-info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .voter-info-box li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+  }
+  
+  .voter-info-box li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .voter-panel {
+      padding: 20px;
+    }
+  
+    .voter-panel h2 {
+      font-size: 24px;
+    }
+  
+    .status-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .voter-info-box {
+      padding: 20px;
+    }
+  }

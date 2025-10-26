@@ -1,0 +1,231 @@
+/* frontend/src/components/AdminPanel.css */
+.admin-panel {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .admin-panel h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+  }
+  
+  /* Messages */
+  .message {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .error-message {
+    background: #fee;
+    color: #c33;
+    border-left: 4px solid #c33;
+  }
+  
+  .success-message {
+    background: #efe;
+    color: #3c3;
+    border-left: 4px solid #3c3;
+  }
+  
+  /* Admin Sections */
+  .admin-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+  }
+  
+  .admin-section h3 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  /* Form Elements */
+  .form-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  
+  .form-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+  
+  .form-input:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+  }
+  
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  }
+  
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  }
+  
+  .btn-success {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+  
+  .btn-success:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+  }
+  
+  .btn-danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  }
+  
+  .btn-danger:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  /* Status Indicator */
+  .status-indicator {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  .status-dot.running {
+    background: #10b981;
+  }
+  
+  .status-dot.stopped {
+    background: #ef4444;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  .status-text {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Warning and Info Text */
+  .warning-text {
+    color: #f59e0b;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  
+  .info-text {
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .admin-panel {
+      padding: 20px;
+    }
+  
+    .admin-panel h2 {
+      font-size: 24px;
+    }
+  
+    .form-group {
+      flex-direction: column;
+    }
+  
+    .form-input {
+      min-width: 100%;
+    }
+  
+    .button-group {
+      flex-direction: column;
+    }
+  
+    .button-group .btn {
+      width: 100%;
+    }
+  }
